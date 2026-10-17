@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
 import process from "node:process";
-import { defineConfig } from "vite";
+import { defineConfig, lazyPlugins } from "vite-plus";
 const host = process.env.TAURI_DEV_HOST;
 
 import tailwindcss from "@tailwindcss/vite";
@@ -8,7 +8,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig(() => ({
-  plugins: [react(), tailwindcss()],
+  plugins: lazyPlugins(() => [react(), tailwindcss()]),
 
   resolve: {
     alias: {
