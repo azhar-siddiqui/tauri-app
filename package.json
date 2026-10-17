@@ -8,7 +8,9 @@
     "build": "tsc && vp build",
     "preview": "vp preview",
     "tauri": "tauri dev",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "lint": "vp lint",
+    "lint:fix": "vp lint --fix"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
