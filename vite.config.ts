@@ -4,7 +4,7 @@ import { defineConfig, lazyPlugins } from "vite-plus";
 const host = process.env.TAURI_DEV_HOST;
 
 import tailwindcss from "@tailwindcss/vite";
-import path from "path";
+import path from "node:path";
 
 // https://vite.dev/config/
 export default defineConfig(() => ({
